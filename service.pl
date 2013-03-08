@@ -15,4 +15,4 @@ my $arrivee = 1;
 
 my $xmlPath = "./services.xml";
 my $params = TripParameter->constructeur($date, $depart, $arrivee);
-my $facade = TripFacade -> constructeur($xmlPath);
+my $facade = TripFacade->constructeur($xmlPath);
