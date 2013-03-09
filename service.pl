@@ -18,7 +18,7 @@ get '/' => sub{
 } => 'index';
 
 #route service
-get '/service.html' => sub{
+post '/service.html' => sub{
 	my $self = shift;
 	
 	print($self);
@@ -33,7 +33,8 @@ get '/service.html' => sub{
 	my $facade = TripFacade->new($xmlPath);
 	
 	$self->render($self);
-} => results;
+} => 'results';
 
 
 app->start;
+
