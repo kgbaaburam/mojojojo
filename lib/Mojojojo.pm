@@ -14,12 +14,9 @@ sub startup {
 	# Normal route to controller
 	$r->get('/form')->to('Entry#form');
   
-	$r->get('/data')->to('Entry#data');
+	$r->get('/recherche')->to('Entry#recherche');
   
-	$r->websocket('/')->to('Entry#service');
-
-	
-
+	$r->websocket('/service')->to('Entry#service');
 }
 
 1;
