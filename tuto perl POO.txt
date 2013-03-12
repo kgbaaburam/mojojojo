@@ -1,1 +1,2 @@
 http://woufeil.developpez.com/tutoriels/perl/poo/
+http://www.unixgarden.com/index.php/gnu-linux-magazine/developpement-web-en-perl-avec-mojolicious/2

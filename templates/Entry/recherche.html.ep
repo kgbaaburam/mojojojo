@@ -1,0 +1,38 @@
+% layout 'default';
+% title 'recherche';
+
+<script type="text/javascript">
+	$(function(){
+		$("#datepicker").datepicker();
+	});
+</script>
+
+
+<div id="leftColumn">
+	<%= form_for recherche => (method => 'get') => begin %>
+		<table>
+			<tr>
+				<td> Date </td>
+				<td> <input type="text" name="date" id="datepicker" value="<%= $date %>" /> </td>
+			</tr>
+			<tr>
+				<td> Lieu d&eacute;part </td>
+				<td> <input type="text" name="lieuDepart" id="lieuDepart" value="<%= $lieuDepart %>" /> </td>
+			</tr>
+			<tr>
+				<td> Lieu arriv&eacute;e </td>
+				<td> <input type="text" name="lieuArrivee" id="lieuArrivee" value="<%= $lieuArrivee %>"/> </td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="submit" value="Go !" />
+				</td>
+		</table>
+	<% end %>
+</div>
+<div id="rightColumn">
+	Data template
+	<div id="lPH">
+		
+	</div>
+</div>

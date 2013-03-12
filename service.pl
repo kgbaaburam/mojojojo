@@ -8,11 +8,33 @@
 #####################################################################
 use Mojolicious::Lite;
 
-#TODO : Récupération des paramètres POST
-my $date = 1; 
-my $depart = 1; 
-my $arrivee = 1; 
+use TripFacade;
+use TripParameter;
 
-my $xmlPath = "./services.xml";
-my $params = TripParameter->constructeur($date, $depart, $arrivee);
-my $facade = TripFacade->constructeur($xmlPath);
+# route principale
+get '/' => sub{
+	my $self = shift;
+    return $self->render;
+} => 'index';
+
+#route service
+post '/service.html' => sub{
+	my $self = shift;
+	
+	print($self);
+	
+	#TODO : Récupération des paramètres POST
+	my $date = 1; 
+	my $depart = 1; 
+	my $arrive = 1; 
+
+	my $xmlPath = "./services.xml";
+	my $params = TripParameter->new($date, $depart, $arrive);
+	my $facade = TripFacade->new($xmlPath);
+	
+	$self->render($self);
+} => 'results';
+
+
+app->start;
+
