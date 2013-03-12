@@ -1,5 +1,7 @@
 package TripFacade;
 
+use ServiceSchemasBuilder;
+
 sub constructeur{
 	my($class, $xmlSchemaPath) = @_;
 	my $this = {

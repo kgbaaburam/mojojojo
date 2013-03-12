@@ -10,6 +10,7 @@ Config instructions :
 - install CPAN Plugins
 
 sudo cpanm URI
+sudo cpanm File::Slurp;
 
 ========
 
