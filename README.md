@@ -30,3 +30,4 @@ MOJO Tooltips :
 Perl Terminal : (dans le dossier de la solution)
 "mojo generate app"
 
+Pour vos tests en local utilisez des fichiers .pl préfixés par "test" (ignorés par git)
